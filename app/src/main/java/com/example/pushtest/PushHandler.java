@@ -1,5 +1,7 @@
 package com.example.pushtest;
 
+import static com.example.pushtest.PushAdapter.receivePushFromProvider;
+
 import android.os.storage.StorageManager;
 
 import java.util.ArrayList;
@@ -14,6 +16,11 @@ public class PushHandler {
     StorageManager mStorageManager;
 
     Boolean registrationDone = null;
+
+    public ArrayList<PushData> getNotifications() {
+        ArrayList<PushData> receivedPushList = receivePushFromProvider();
+        return orderNotifications(receivedPushList);
+    }
 
     private ArrayList<PushData> orderNotifications(ArrayList<PushData> pushList) {
         if (pushList != null && !pushList.isEmpty()) {
@@ -76,7 +83,6 @@ public class PushHandler {
         System.out.println(pushData.getPushType());
         return false;
     }
-
 
 
 }
