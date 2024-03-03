@@ -11,7 +11,7 @@ public class PushHandlerTest {
     private final StorageManager mStorageManager = null;
 
     @Test
-    public void givenValidLoginPushData_handlePush_ReturnsTrue() {
+    public void givenLoginPushDataValid_handlePush_ReturnsTrue() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
@@ -26,7 +26,7 @@ public class PushHandlerTest {
     }
 
     @Test
-    public void givenInvalidLoginUser_handlePush_ReturnsFalse() {
+    public void givenLoginPushDataWithInvalidUser_handlePush_ReturnsFalse() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
@@ -55,7 +55,7 @@ public class PushHandlerTest {
     }
 
     @Test
-    public void givenNullUserLoginPushData_handlePush_ReturnsFalse() {
+    public void givenLoginPushDataWithNullUser_handlePush_ReturnsFalse() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
@@ -71,7 +71,7 @@ public class PushHandlerTest {
     }
 
     @Test
-    public void givenValidTransactionPushData_handlePush_ReturnsTrue() {
+    public void givenTransactionPushDataValid_handlePush_ReturnsTrue() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
@@ -86,7 +86,7 @@ public class PushHandlerTest {
     }
 
     @Test
-    public void givenInvalidTransactionSerialNumber_handlePush_ReturnsFalse() {
+    public void givenTransactionPushDataWithInvalidSerialNumber_handlePush_ReturnsFalse() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
@@ -102,7 +102,7 @@ public class PushHandlerTest {
     }
 
     @Test // TODO: Null values are not handled! Use @NotNull annotation and delete test?
-    public void givenNullTransactionSerialNumber_handlePush_ReturnsFalse() {
+    public void givenTransactionPushDataWithNullSerialNumber_handlePush_ReturnsFalse() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
@@ -118,7 +118,7 @@ public class PushHandlerTest {
     }
 
     @Test
-    public void givenValidRegistrationPushData_handlePush_ReturnsTrue() {
+    public void givenRegistrationPushDataValid_handlePush_ReturnsTrue() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
@@ -134,7 +134,7 @@ public class PushHandlerTest {
     }
 
     @Test
-    public void givenInvalidRegistrationUser_handlePush_ReturnsFalse() {
+    public void givenRegistrationPushDataWithInvalidUser_handlePush_ReturnsFalse() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
@@ -151,7 +151,7 @@ public class PushHandlerTest {
     }
 
     @Test
-    public void givenNullRegistrationUser_handlePush_ReturnsFalse() {
+    public void givenRegistrationPushDataWithNullUser_handlePush_ReturnsFalse() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
@@ -168,7 +168,7 @@ public class PushHandlerTest {
     }
 
     @Test
-    public void givenValidUndefinedPushData_handlePush_ReturnsFalse() {
+    public void givenUndefinedPushData_handlePush_ReturnsFalse() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
         PushData data = new TestPushDataBuilderImpl()
