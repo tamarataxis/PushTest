@@ -130,6 +130,7 @@ public class PushHandlerTest {
 
         // then
         assertTrue(result);
+        assertTrue(handler.registrationDone);
     }
 
     @Test
@@ -146,6 +147,7 @@ public class PushHandlerTest {
 
         // then
         assertFalse(result);
+        assertFalse(handler.registrationDone);
     }
 
     @Test
@@ -162,6 +164,7 @@ public class PushHandlerTest {
 
         // then
         assertFalse(result);
+        assertFalse(handler.registrationDone);
     }
 
     @Test
