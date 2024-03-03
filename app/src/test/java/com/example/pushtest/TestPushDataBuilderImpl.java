@@ -13,7 +13,7 @@ class TestPushDataBuilderImpl implements TestPushDataBuilder {
     private String username;
 
     @Override
-    public TestPushDataBuilder setValidDefaultData(@NonNull PushType type) {
+    public TestPushDataBuilder setValidDefaultData(PushType type) {
         this.id = "defaultId";
         this.serialNumber = "TR0815";
         this.title = "Default Title";

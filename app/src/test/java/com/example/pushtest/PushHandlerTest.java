@@ -182,4 +182,19 @@ public class PushHandlerTest {
         assertFalse(result);
     }
 
+    @Test // TODO: Null values are not handled! Use @NotNull annotation and delete test?
+    public void givenNullPushTypePushData_handlePush_ReturnsFalse() {
+        // given
+        PushHandler handler = new PushHandler(mStorageManager);
+        PushData data = new TestPushDataBuilderImpl()
+                .setValidDefaultData(null)
+                .build();
+
+        // when
+        Boolean result = handler.handlePush(data);
+
+        // then
+        assertFalse(true); // TODO: what is the expectation here?
+    }
+
 }
