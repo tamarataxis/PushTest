@@ -38,6 +38,8 @@ public class PushHandler {
     }
 
     public Boolean handlePush(PushData pushData) {
+        if (pushData == null || pushData.getPushType() == null) return false;
+
         return switch (pushData.getPushType()) {
             case Login -> handleLoginPush(pushData);
             case Transaction -> handleTransactionPush(pushData);

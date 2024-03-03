@@ -41,7 +41,7 @@ public class PushHandlerTest {
         assertFalse(result);
     }
 
-    @Test  // TODO: Null values are not handled! Use @NotNull annotation and delete test?
+    @Test
     public void givenNullPushData_handlePush_ReturnsFalse() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
@@ -182,7 +182,7 @@ public class PushHandlerTest {
         assertFalse(result);
     }
 
-    @Test // TODO: Null values are not handled! Use @NotNull annotation and delete test?
+    @Test
     public void givenNullPushTypePushData_handlePush_ReturnsFalse() {
         // given
         PushHandler handler = new PushHandler(mStorageManager);
@@ -194,7 +194,7 @@ public class PushHandlerTest {
         Boolean result = handler.handlePush(data);
 
         // then
-        assertFalse(true); // TODO: what is the expectation here?
+        assertFalse(result);
     }
 
 }

@@ -28,7 +28,7 @@ public class PushData {
     }
 
     public String getSerialNumber() {
-        return serialNumber;
+        return serialNumber != null ? serialNumber : "";
     }
 
     public String getTitle() {
