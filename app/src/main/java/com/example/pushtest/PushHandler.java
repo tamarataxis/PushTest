@@ -47,7 +47,7 @@ public class PushHandler {
     }
 
 
-    public Boolean handleLoginPush(PushData pushData) {
+    private Boolean handleLoginPush(PushData pushData) {
         if (pushData.isValidLogin()) {
             // Navigate to the login screen.
             System.out.println(pushData.getPushType());
@@ -55,7 +55,7 @@ public class PushHandler {
         } else return false;
     }
 
-    public Boolean handleTransactionPush(PushData pushData) {
+    private Boolean handleTransactionPush(PushData pushData) {
         if (pushData.isValidTransaction()) {
             // Navigate to the transaction screen.
             System.out.println(pushData.getPushType());
